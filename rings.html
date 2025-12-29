@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rings — LUV,20</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* SAME CSS AS PENDANT PAGE — UNCHANGED */
+    :root{
+      --beige:#f5eede;
+      --soft-pink:#f29fb3;
+      --deep-pink:#e76f91;
+      --black:#111;
+      --muted:#8b7f7a;
+      --shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      background:linear-gradient(180deg,#eef0f6,#f7f4f1);
+      color:var(--black);
+    }
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(6px);
+      padding:12px 20px;
+    }
+    .nav{
+      max-width:1100px;margin:auto;
+      display:flex;justify-content:space-between;align-items:center;
+    }
+    .brand{display:flex;gap:12px;text-decoration:none;color:inherit}
+    .brand img{
+      width:56px;height:56px;border-radius:50%;
+      background:var(--beige);padding:6px;
+    }
+    .brand h1{font-family:'Playfair Display';font-size:20px;margin:0}
+    nav a{margin-left:14px;text-decoration:none;color:var(--black);font-weight:600}
+    .hero{padding:40px 20px 30px;text-align:center}
+    .hero h2{font-family:'Playfair Display';font-size:40px;margin-bottom:10px}
+    .hero p{color:var(--muted);max-width:600px;margin:auto}
+    .hero-tag{font-size:12px;letter-spacing:2px;font-weight:700;color:var(--deep-pink);display:inline-block;margin-bottom:14px}
+    .divider{width:60px;height:3px;background:var(--soft-pink);border-radius:10px;margin:28px auto 0}
+    .container{max-width:1100px;margin:auto;padding:40px 20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
+    .card{
+      background:#fff;border-radius:16px;box-shadow:var(--shadow);
+      overflow:hidden;transition:.3s;position:relative;
+    }
+    .card:hover{transform:translateY(-6px)}
+    .product-img{height:260px;background:#f8f4f3}
+    .product-img img{width:100%;height:100%;object-fit:cover}
+    .content{padding:16px}
+    .content h4{margin:0 0 6px;font-size:16px}
+    .price{font-weight:700;margin-bottom:10px}
+    .btn{width:100%;padding:10px;border-radius:10px;border:none;font-weight:700}
+    .btn-buy{background:var(--soft-pink);color:white}
+    .btn-disabled{background:#ddd;color:#777}
+    .badge{
+      position:absolute;top:12px;left:12px;
+      background:var(--deep-pink);color:white;
+      padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;
+    }
+    footer{text-align:center;padding:30px;color:var(--muted)}
+    @media(max-width:600px){.hero h2{font-size:28px}}
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img src="logo.jfif">
+      <h1>LUV,20</h1>
+    </a>
+    <nav>
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="hero-tag">LUV,20 COLLECTION</span>
+  <h2>Rings</h2>
+  <p>Beautifully crafted rings that add elegance and luv to every gesture 💍</p>
+  <div class="divider"></div>
+</section>
+
+<section class="container">
+  <div class="grid">
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img"><img src="ring1.jfif"></div>
+      <div class="content">
+        <h4>Floral Gold Ring</h4>
+        <div class="price">₹250</div>
+        <button class="btn btn-buy" onclick="orderNow('Floral Gold Ring')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+     <div class="card">
+      <div class="product-img"><img src="ring2.jfif"></div>
+      <div class="content">
+        <h4>Asymmetrical Ring</h4>
+        <div class="price">₹280</div>
+        <button class="btn btn-buy" onclick="orderNow('Asymmetrical Ring')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img"><img src="ring3.jfif"></div>
+      <div class="content">
+        <h4>Snake Ring</h4>
+        <div class="price">₹280</div>
+        <button class="btn btn-buy" onclick="orderNow('Snake Ring')">Order via Instagram</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>© 2025 LUV,20 — Shine with all the luv 💗</footer>
+
+<script>
+function orderNow(product){
+  const message = encodeURIComponent(
+    `Hi LUV,20! I'm interested in the ${product}. Please share availability 💕`
+  );
+
+  const igDM = `https://www.instagram.com/direct/new/?text=${message}`;
+
+  window.open(igDM, "_blank");
+}
+</script>
+
+</body>
+</html>

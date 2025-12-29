@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendants — LUV,20</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --beige:#f5eede;
+      --soft-pink:#f29fb3;
+      --deep-pink:#e76f91;
+      --black:#111;
+      --muted:#8b7f7a;
+      --shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      background:linear-gradient(180deg,#eef0f6,#f7f4f1);
+      color:var(--black);
+    }
+
+    /* HEADER */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(6px);
+      padding:12px 20px;
+    }
+
+    .nav{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .brand img{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:var(--beige);
+      padding:6px;
+    }
+
+    .brand h1{
+      font-family:'Playfair Display',serif;
+      font-size:20px;
+      margin:0;
+    }
+
+    nav a{
+      margin-left:14px;
+      text-decoration:none;
+      color:var(--black);
+      font-weight:600;
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:40px 20px 30px;
+      text-align:center;
+    }
+
+    .hero h2{
+      font-family:'Playfair Display',serif;
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      max-width:600px;
+      margin:auto;
+    }
+.hero-tag{
+  display:inline-block;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+  color:var(--deep-pink);
+  margin-bottom:14px;
+}
+
+.divider{
+  width:60px;
+  height:3px;
+  background:var(--soft-pink);
+  border-radius:10px;
+  margin:28px auto 0;
+}
+
+    /* GRID */
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transition:transform .3s ease;
+      position:relative;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .product-img{
+      height:260px;
+      background:#f8f4f3;
+    }
+
+    .product-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .content{
+      padding:16px;
+    }
+
+    .content h4{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+
+    .price{
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .btn{
+      width:100%;
+      padding:10px;
+      border-radius:10px;
+      border:none;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .btn-buy{
+      background:var(--soft-pink);
+      color:white;
+    }
+
+    .btn-disabled{
+      background:#ddd;
+      color:#777;
+      cursor:not-allowed;
+    }
+
+    .badge{
+      position:absolute;
+      top:12px;
+      left:12px;
+      background:var(--deep-pink);
+      color:white;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    /* FOOTER */
+    footer{
+      padding:30px 20px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media(max-width:600px){
+      .hero h2{font-size:28px}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img src="logo.jfif" alt="LUV,20 logo">
+      <h1>LUV,20</h1>
+    </a>
+    <nav>
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-tag">LUV,20 COLLECTION</span>
+  <h2>Pendants</h2>
+  <p>Delicate, elegant pendants designed to add a little luv to every outfit ✨</p></p>
+
+  <div class="divider"></div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="container">
+  <div class="grid">
+
+    <!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant1.jfif">
+      </div>
+      <div class="content">
+        <h4>Red Stone + Rose</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Red Stone + Rose')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant2.jfif">
+      </div>
+      <div class="content">
+        <h4>Gold Flower With Pearl</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Gold Flower With Pearl')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <!-- OUT OF STOCK -->
+    <div class="card">
+      <span class="badge">Out of Stock</span>
+      <div class="product-img">
+        <img src="pendant3.jfif">
+      </div>
+      <div class="content">
+        <h4>Silver Shell With Pearl</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-disabled">Unavailable</button>
+      </div>
+    </div>
+
+    <!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant4.jfif">
+      </div>
+      <div class="content">
+        <h4>Blue Moon Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Blue Moon Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant5.jfif">
+      </div>
+      <div class="content">
+        <h4>Dolphin Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Dolphin Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant6.jfif">
+      </div>
+      <div class="content">
+        <h4>Green Flower Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Green Flower Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant7.jfif">
+      </div>
+      <div class="content">
+        <h4>Flower Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Flower Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant8.jfif">
+      </div>
+      <div class="content">
+        <h4>Flower Blossom Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Flower Blossom Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant9.jfif">
+      </div>
+      <div class="content">
+        <h4>Heart Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Heart Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant10.jfif">
+      </div>
+      <div class="content">
+        <h4>Aurora Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Aurora Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant11.jfif">
+      </div>
+      <div class="content">
+        <h4>Earthy Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Earthy Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+ <!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant12.jfif">
+      </div>
+      <div class="content">
+        <h4>Mermaid Pendant</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Mermaid Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant13.jfif">
+      </div>
+      <div class="content">
+        <h4>Love Pendant</h4>
+        <div class="price">₹250</div>
+        <button class="btn btn-buy" onclick="orderNow('Love Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant14.jfif">
+      </div>
+      <div class="content">
+        <h4>Flower with Pearl</h4>
+        <div class="price">₹350</div>
+        <button class="btn btn-buy" onclick="orderNow('Flower with Pearl')">Order via Instagram</button>
+      </div>
+    </div>
+
+<!-- AVAILABLE -->
+    <div class="card">
+      <div class="product-img">
+        <img src="pendant15.jfif">
+      </div>
+      <div class="content">
+        <h4>Round Pendant</h4>
+        <div class="price">₹500</div>
+        <button class="btn btn-buy" onclick="orderNow('Round Pendant')">Order via Instagram</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 LUV,20 — Shine with all the luv 💗
+</footer>
+
+<script>
+function orderNow(product){
+  const message = encodeURIComponent(
+    `Hi LUV,20! I'm interested in the ${product}. Please share availability 💕`
+  );
+
+  const igDM = `https://www.instagram.com/direct/new/?text=${message}`;
+
+  window.open(igDM, "_blank");
+}
+</script>
+
+</body>
+</html>

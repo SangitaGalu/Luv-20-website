@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earrings — LUV.20</title>
+
+ <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --beige:#f5eede;
+      --soft-pink:#f29fb3;
+      --deep-pink:#e76f91;
+      --black:#111;
+      --muted:#8b7f7a;
+      --shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Montserrat',sans-serif;
+      background:linear-gradient(180deg,#eef0f6,#f7f4f1);
+      color:var(--black);
+    }
+
+    /* HEADER */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(6px);
+      padding:12px 20px;
+    }
+
+    .nav{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .brand img{
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:var(--beige);
+      padding:6px;
+    }
+
+    .brand h1{
+      font-family:'Playfair Display',serif;
+      font-size:20px;
+      margin:0;
+    }
+
+    nav a{
+      margin-left:14px;
+      text-decoration:none;
+      color:var(--black);
+      font-weight:600;
+    }
+
+    /* HERO */
+
+    .hero{
+      padding:40px 20px 30px;
+      text-align:center;
+    }
+
+    .hero h2{
+      font-family:'Playfair Display',serif;
+      font-size:40px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      max-width:600px;
+      margin:auto;
+    }
+.hero-tag{
+  display:inline-block;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+  color:var(--deep-pink);
+  margin-bottom:14px;
+}
+
+.divider{
+  width:60px;
+  height:3px;
+  background:var(--soft-pink);
+  border-radius:10px;
+  margin:28px auto 0;
+}
+
+    /* GRID */
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      transition:transform .3s ease;
+      position:relative;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .product-img{
+      height:260px;
+      background:#f8f4f3;
+    }
+
+    .product-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .content{
+      padding:16px;
+    }
+
+    .content h4{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+
+    .price{
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .btn{
+      width:100%;
+      padding:10px;
+      border-radius:10px;
+      border:none;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    .btn-buy{
+      background:var(--soft-pink);
+      color:white;
+    }
+
+    .btn-disabled{
+      background:#ddd;
+      color:#777;
+      cursor:not-allowed;
+    }
+
+    .badge{
+      position:absolute;
+      top:12px;
+      left:12px;
+      background:var(--deep-pink);
+      color:white;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+    }
+    /* FOOTER */
+    footer{
+      padding:30px 20px;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media(max-width:600px){
+      .hero h2{font-size:28px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img src="logo.jfif">
+      <h1>LUV,20</h1>
+    </a>
+    <nav>
+      <a href="index.html#shop">Shop</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <span class="hero-tag">LUV,20 COLLECTION</span>
+  <h2>Earrings</h2>
+  <p>Charming earrings designed to make you shine with every smile ✨</p>
+  <div class="divider"></div>
+</section>
+
+<section class="container">
+  <div class="grid">
+
+    <div class="card">
+      <div class="product-img"><img src="earring1.jfif"></div>
+      <div class="content">
+        <h4>Pearl Drop Earrings</h4>
+        <div class="price">₹60</div>
+        <button class="btn btn-buy" onclick="orderNow('Pearl Drop Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring2.jfif"></div>
+      <div class="content">
+        <h4>Pink Hoop Earrings</h4>
+        <div class="price">₹60</div>
+        <button class="btn btn-buy" onclick="orderNow('Pink Hoop Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="badge">Out of Stock</span>
+      <div class="product-img"><img src="earring3.jfif"></div>
+      <div class="content">
+        <h4>Star Stud Earrings</h4>
+        <div class="price">₹60</div>
+        <button class="btn btn-disabled">Unavailable</button>
+      </div>
+    </div>
+
+<div class="card">
+      <div class="product-img"><img src="earring4.jfif"></div>
+      <div class="content">
+        <h4>Golden Hoop Earrings</h4>
+        <div class="price">₹70</div>
+        <button class="btn btn-buy" onclick="orderNow('Golden Hoop Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring5.jfif"></div>
+      <div class="content">
+        <h4>Golden Hoop Earrings</h4>
+        <div class="price">₹70</div>
+        <button class="btn btn-buy" onclick="orderNow('Golden Hoop Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+<div class="card">
+      <span class="badge">Out of Stock</span>
+      <div class="product-img"><img src="earring6.jfif"></div>
+      <div class="content">
+        <h4>Golden Hoop Earrings</h4>
+        <div class="price">₹70</div>
+        <button class="btn btn-disabled">Unavailable</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring7.jfif"></div>
+      <div class="content">
+        <h4>Golden Hoop Earrings</h4>
+        <div class="price">₹60</div>
+        <button class="btn btn-buy" onclick="orderNow('Golden Hoop Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring8.jfif"></div>
+      <div class="content">
+        <h4>Golden Hoop Earrings</h4>
+        <div class="price">₹60</div>
+        <button class="btn btn-buy" onclick="orderNow('Golden Hoop Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring9.jfif"></div>
+      <div class="content">
+        <h4>Golden Hoop Earrings</h4>
+        <div class="price">₹60</div>
+        <button class="btn btn-buy" onclick="orderNow('Golden Hoop Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring10.jfif"></div>
+      <div class="content">
+        <h4>Half Floral with Pearl Earrings</h4>
+        <div class="price">₹60</div>
+        <button class="btn btn-buy" onclick="orderNow('Half Floral with Pearl Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring11.jfif"></div>
+      <div class="content">
+        <h4>Flower With Pearl Top</h4>
+        <div class="price">₹50</div>
+        <button class="btn btn-buy" onclick="orderNow('Flower With Pearl Top')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring12.jfif"></div>
+      <div class="content">
+        <h4>Pearl Top</h4>
+        <div class="price">₹50</div>
+        <button class="btn btn-buy" onclick="orderNow('Pearl Top')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring13.jfif"></div>
+      <div class="content">
+        <h4>Pink Butterfly Top</h4>
+        <div class="price">₹220</div>
+        <button class="btn btn-buy" onclick="orderNow('Pink Butterfly Top')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring14.jfif"></div>
+      <div class="content">
+        <h4>Blue Butterfly Top</h4>
+        <div class="price">₹220</div>
+        <button class="btn btn-buy" onclick="orderNow('Blue Butterfly Top')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring15.jfif"></div>
+      <div class="content">
+        <h4>Love With Pear Top</h4>
+        <div class="price">₹50</div>
+        <button class="btn btn-buy" onclick="orderNow('Love With Pear Top')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring16.jfif"></div>
+      <div class="content">
+        <h4>Floral Earrings</h4>
+        <div class="price">₹50</div>
+        <button class="btn btn-buy" onclick="orderNow('Floral Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring17.jfif"></div>
+      <div class="content">
+        <h4>Floral Stud Earrings</h4>
+        <div class="price">₹50</div>
+        <button class="btn btn-buy" onclick="orderNow('Floral Stud Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring18.jfif"></div>
+      <div class="content">
+        <h4>Bow Top (Pink, White, Yellow)</h4>
+        <div class="price">₹40</div>
+        <button class="btn btn-buy" onclick="orderNow('Bow Top')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring19.jfif"></div>
+      <div class="content">
+        <h4>Top (Pink, White, Yellow)</h4>
+        <div class="price">₹40</div>
+        <button class="btn btn-buy" onclick="orderNow('Top')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring20.jfif"></div>
+      <div class="content">
+        <h4>Chunky Floral Earrings</h4>
+        <div class="price">₹200</div>
+        <button class="btn btn-buy" onclick="orderNow('Chunky Floral Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+<div class="card">
+      <div class="product-img"><img src="earring21.jfif"></div>
+      <div class="content">
+        <h4>Antique Earrings</h4>
+        <div class="price">₹40(per pair)</div>
+        <button class="btn btn-buy" onclick="orderNow('Antique Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring22.jfif"></div>
+      <div class="content">
+        <h4>Antique Earrings</h4>
+        <div class="price">₹40(per pair)</div>
+        <button class="btn btn-buy" onclick="orderNow('Antique Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="product-img"><img src="earring23.jfif"></div>
+      <div class="content">
+        <h4>Antique Earrings</h4>
+        <div class="price">₹40(per pair)</div>
+        <button class="btn btn-buy" onclick="orderNow('Antique Earrings')">Order via Instagram</button>
+      </div>
+    </div>
+
+<div class="card">
+      <div class="product-img"><img src="earring24.jfif"></div>
+      <div class="content">
+        <h4>Tops</h4>
+        <div class="price">₹150(7 pairs)</div>
+        <button class="btn btn-buy" onclick="orderNow('Tops')">Order via Instagram</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>© 2025 LUV,20 — Shine with all the luv 💗</footer>
+
+<script>
+function orderNow(product){
+  const message = encodeURIComponent(
+    `Hi LUV,20! I'm interested in the ${product}. Please share availability 💕`
+  );
+
+  const igDM = `https://www.instagram.com/direct/new/?text=${message}`;
+
+  window.open(igDM, "_blank");
+}
+</script>
+
+</body>
+</html>
