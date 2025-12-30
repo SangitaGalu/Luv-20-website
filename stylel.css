@@ -93,74 +93,33 @@
 
 @media (max-width: 768px) {
 
-  /* General spacing */
-  body {
-    overflow-x: hidden;
-  }
-
-  /* Header */
-  header {
-    padding: 10px 14px;
-  }
-
-  .nav {
-    flex-direction: row;
-  }
-
-  nav a {
-    font-size: 14px;
-    margin-left: 10px;
-  }
-
-  /* Hero section */
-  .hero {
-    padding: 28px 16px 20px;
-  }
-
-  .hero h2 {
-    font-size: 26px;
-    line-height: 1.2;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-
-  /* Product grid */
-  .container {
-    padding: 30px 16px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  /* Cards */
-  .product-img {
-    height: 200px;
-  }
-
-  .content h4 {
-    font-size: 14px;
-  }
-
-  .price {
-    font-size: 14px;
-  }
-
-  .btn {
-    font-size: 13px;
-    padding: 9px;
-  }
-}
-
-@media (max-width: 420px) {
-  .grid {
+  /* About section fix */
+  .about-grid {
     grid-template-columns: 1fr;
   }
 
-  .product-img {
-    height: 220px;
+  .about-grid > div {
+    width: 100%;
+  }
+
+  /* Buttons spacing fix */
+  .about-grid .btn,
+  .about-grid a {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  /* Text breathing room */
+  .about-grid p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* Our Promise box */
+  .about-grid .promise-box {
+    padding: 20px;
+    margin-top: 10px;
   }
 }
