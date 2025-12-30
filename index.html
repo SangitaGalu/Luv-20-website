@@ -47,7 +47,11 @@
           <h2>Accessories that make you <span style="color:var(--deep-pink)">shine</span></h2>
           <p class="lead">Handpicked earrings, necklaces, and cute accessories — designed to add a little love to your everyday.</p>
           <div class="cta">
-            <button class="btn btn-pink" onclick="scrollToSection('shop')">Shop collection</button>
+
+<button class="btn btn-pink" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
+  Shop collection
+</button>
+
             <a href="https://www.instagram.com/luv20_xoxo?igsh=MWt1a3B1bGU1dmViMw==" target="_blank" class="btn btn-outline">Follow on Instagram</a>
           </div>
         </div>
@@ -63,7 +67,7 @@
     </section>
 
     <!-- SHOP -->
-    <section id="shop">
+<section id="shop">
   <div class="container">
     <h3>Shop by Category</h3>
 
@@ -128,7 +132,7 @@
           <div>
             <div style="background:var(--beige);padding:22px;border-radius:14px;box-shadow:var(--card-shadow)">
               <div class="promise-box">
-                <h4 style="margin-top:0">Our Promise</h4>
+              <h4 style="margin-top:0">Our Promise</h4>
               <ul class="small">
                 <li>Carefully selected materials</li>
                 <li>Thoughtful packaging</li>
